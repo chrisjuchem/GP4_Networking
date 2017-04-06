@@ -9,9 +9,6 @@ public class LocalCamera : MonoBehaviour {
 	private Player p = null;
 
 	void Update () {
-
-			
-
 		if (p != null) {
 			//float turn = Input.GetAxis ("Mouse X") * Time.deltaTime * 150.0f;
 			//transform.RotateAround(p.transform.position, Vector3.up, turn);
@@ -19,6 +16,7 @@ public class LocalCamera : MonoBehaviour {
 			transform.RotateAround(p.transform.position, p.transform.TransformVector(Vector3.left), tilt);
 		}
 	}
+
 
 	public void attachToPlayer(Player pNew) {
 		this.p = pNew;
